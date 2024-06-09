@@ -128,6 +128,19 @@ dataset_base = Config({
     'label_map': None
 })
 
+valorant = dataset_base.copy({
+    'name': 'Valorant',
+
+    'train_images': '/valo/train/images/',
+    'train_info':   'train_coco_annotations.json',
+
+    'valid_images': '/valo/test/images/',
+    'valid_info':   'test_coco_annotations.json',
+
+    'has_gt': True,
+    'class_names': ('')
+})
+
 coco2014_dataset = dataset_base.copy({
     'name': 'COCO 2014',
     
